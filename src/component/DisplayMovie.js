@@ -10,12 +10,15 @@ const DisplayMovie = ({movie}) => {
         <div className='movie'>
             <div><p>{movie.Year}</p></div>
             <div>
-                <img src= {movie.Poster !== 'N/A' ? movie.Poster : movie.Poster = 'https://via.placeholder.com/400'} alt= {movie.Title}/>
+                <a key='' href={`https://www.imdb.com/title/${movie.imdbID}`} target="_blank"><img src= {movie.Poster !== 'N/A' ? movie.Poster : movie.Poster = 'https://via.placeholder.com/400'} alt= {movie.Title}/></a>
+                {/* <img src= {movie.Poster !== 'N/A' ? movie.Poster : movie.Poster = 'https://via.placeholder.com/400'} alt= {movie.Title}/> */}
             </div>
             <div>
               <span>{movie.Type}</span>
               <h3>{movie.Title}</h3>
-              <h2>{movie.imdbID}</h2>
+              {/* <a key='' href='https://www.imdb.com/title/movie.imdbID/' target="_blank"><p>{movie.imdbID}</p></a> */}
+
+              {/* <h2>{movie.imdbID}</h2> */}
             </div>
             
         </div>

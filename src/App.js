@@ -36,6 +36,11 @@ const App = () => {
       <input placeholder='Enter movie names'
       value={searchValue}
       onChange={(event) => setSearchValue(event.target.value)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") {
+          search(searchValue); //search function when Enter is pressed
+        }
+      }}
       />
 
       <img
